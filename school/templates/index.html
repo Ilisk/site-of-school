@@ -1,34 +1,39 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="news-list">
-        {% for obj in obj_list%}
-    <div class="news">
-        
+      {% for obj in obj_list%}
+      <div class="news">
         <div class="image">
-        <a href="#"><img src="{{MEDIA_URL}}/{{ obj.image }}" alt="" width="0.5em" height="05.em"></a>
+          <a href="#"
+            ><img
+              src="{{MEDIA_URL}}/{{ obj.image }}"
+              alt=""
+              width="0.5em"
+              height="05.em"
+          /></a>
         </div>
 
         <div class="text">
-            <h2>Запись {{ obj.name }}</h2>
-            <div class="inf">
+          <h2>Запись {{ obj.name }}</h2>
+          <div class="inf">
             <p>{{ obj.datetime }}</p>
-            <p>Категория {{ obj.categories }}</p>           
-            </div>
-            <p>{{ obj.text }}</p>
-            <a href="#">Читать далее >></a>
+            <p>Категория {{ obj.categories }}</p>
+          </div>
+          <p>{{ obj.text }}</p>
+          <a href="#">Читать далее >></a>
         </div>
-        
+      </div>
+      {% endfor %}
     </div>
-    {% endfor %}
-</div>
-</body>
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">surprise</a>
+  </body>
 </html>
