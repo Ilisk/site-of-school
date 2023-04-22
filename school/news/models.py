@@ -6,6 +6,7 @@ class News(models.Model):
 
     Th = 'Techonology'
     Cb = 'Celebrity'
+    a = 123
     CHOICES = [
         (Th, "Techonology"),
         (Cb, "Celebrity"),
