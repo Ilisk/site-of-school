@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="card-list">
+       {% for obj in obj_list%}
+        <div class="card">
+            <h2 class="post-tag">{{ obj.name }}</h2>
+            <h2 class="post">{{ obj.datetime }}</h2>
+            <h2 class="post">{{ obj.categories }}</h2>
+            <h2 class="post">{{ obj.text }}</h2>
+            <img src="{{MEDIA_URL}}/{{ obj.image }}" alt="img" width="250" height="250">
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
