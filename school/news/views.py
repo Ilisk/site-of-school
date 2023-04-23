@@ -4,7 +4,9 @@ from .models import News
 
 # Create your views here.
 
-def print_post(request):
+def print(request):
     obj_list = News.objects.all()
-    return render(request, './index.html', {'obj_list': obj_list})
-
+    return render(request, './test.html', {'obj_list': obj_list})
+def test(request):
+    obj_list = News.objects.all()
+    return render(request,'./test.html', {'obj_list': obj_list})

@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'news.apps.NewsConfig',
+    'review.apps.ReviewConfig',
+    'mainpage.apps.MainpageConfig'
 ]
 
 MIDDLEWARE = [
@@ -55,7 +57,10 @@ ROOT_URLCONF = 'school.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': ['mainpage/templates',
+                 'news/templates',
+                 'review/templates',
+                 'slider/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -121,7 +126,13 @@ STATIC_URL = 'static/'
 # Base url to serve media files
 MEDIA_URL = '/media/'
 
+STATICFILES_DIRS = [
+    # BASE_DIR / "static",
+    "slider/static/",
+    "mainpage/static/",
+]
 # Path where media is stored
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 # Default primary key field type

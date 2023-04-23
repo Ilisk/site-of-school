@@ -52,24 +52,41 @@ header a {
   color: #fff;
 }
 
-.container {
-  position: fixed;
-}
 
 .slider {
+  /* background-color: #30a050; */
   width: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
-
+.container {
+  /* background: linear-gradient(
+    149deg,
+    rgb(247, 0, 255) 0%,
+    rgb(255, 145, 0) 100%
+  ); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+  width: 48%;
+  margin: auto;
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
 .news {
   overflow: hidden;
+  
   width: 300px;
   height: 500px;
   margin: auto;
   background-color: #fff;
   border: 2px solid #30a050;
   border-radius: 20px;
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 .image {
