@@ -38,9 +38,18 @@ header a {
   cursor: pointer;
 }
 
+.menu-container {
+  display: inline-block;
+}
+
 .menu-item,
 .social-links li {
   display: inline-block;
+}
+
+.menu-item {
+  position: relative;
+  display: inline-block
 }
 
 .menu-item a {
@@ -52,15 +61,19 @@ header a {
 
 .menu-item a:hover {
   background: #30a050;
+  box-shadow: 0 0 10px #30a05080;
   color: #fff;
 }
 
 .submenu-container {
   position: absolute;
-  /* left: 0; */
   width: 180px;
   background: #fff;
+  box-shadow: 0 0 10px #30a05080;
   display: none;
+  top: 120%;
+  left: 0;
+  transition-delay: 1s;
 }
 
 .menu-item:hover > .submenu-container {
