@@ -38,7 +38,7 @@ header a {
   cursor: pointer;
 }
 
-.menu-container li,
+.menu-item,
 .social-links li {
   display: inline-block;
 }
@@ -60,13 +60,17 @@ header a {
 
 .submenu-container {
   position: absolute;
+  /* left: 0; */
   width: 180px;
   background: #fff;
   display: none;
 }
 
+.menu-item:hover > .submenu-container {
+  display: initial;
+}
+
 .submenu-item {
-  position: static;
   display: block;
 }
 .submenu-item a {
@@ -78,7 +82,13 @@ header a {
 .sub-submenu-container {
   position: absolute;
   left: 180px;
-  top: 0;
+  /* top: 0; */
+  background: #fff;
+  display: none;
+}
+
+.submenu-item:hover > .sub-submenu-container {
+  display: initial;
 }
 
 .container {
