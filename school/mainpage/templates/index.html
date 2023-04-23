@@ -1,0 +1,14 @@
+
+{% extends 'header.html' %}
+{% load static%}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+{% endblock %}
+
+    {% block content %}
+    <div class="text">
+        <p>Hi!</p>
+        <p>this is my content for you</p>
+    </div>
+    {% endblock %}
