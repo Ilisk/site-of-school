@@ -7,10 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-     <link rel="stylesheet" href="{% static 'css/header.css' %}" />
-    {% block link %}
-
-    {% endblock %}
+    <link rel="stylesheet" href="{% static 'css/header.css' %}" />
+    {% block link %} {% endblock %}
     <link
       rel="stylesheet"
       type="text/css"
@@ -21,18 +19,121 @@
       type="text/css"
       href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
     />
+    <link rel="stylesheet" type="text/css" href="../static/css/header.css" />
   </head>
   <body>
     <header>
       <img src="{% static 'images/logo.svg' %}" alt="logo" />
 
       <nav>
-        <ul class="nav-links">
-          <li><a href="#" class="menu-item">Головна</a></li>
-          <li><a href="#" class="menu-item">Про нас</a></li>
-          <li><a href="#" class="menu-item">Новини</a></li>
-          <li><a href="#" class="menu-item">Інформаційна відкритість</a></li>
-          <li><a href="#" class="menu-item">Освітня діяльність</a></li>
+        <ul class="menu-container">
+          <li class="menu-item"><a href="#">Головна</a></li>
+          <li class="menu-item">
+            <a href="#">Про нас</a>
+            <ul class="submenu-container">
+              <li class="submenu-item"><a href="#">Наш літопис</a></li>
+              <li class="submenu-item"><a href="#">Команда</a></li>
+              <li class="submenu-item"><a href="#">Інфраструктура школи</a></li>
+              <li class="submenu-item"><a href="#">Річний огляд</a></li>
+              <li class="submenu-item"><a href="#">Харчування</a></li>
+              <li class="submenu-item"><a href="#">ВСЗЯО</a></li>
+              <li class="submenu-item"><a href="#">Наші досягнення</a></li>
+            </ul>
+          </li>
+          <li class="menu-item"><a href="#">Новини</a></li>
+          <li class="menu-item">
+            <a href="#">Інформаційна відкритість</a>
+            <ul class="submenu-container">
+              <li class="submenu-item"><a href="#"></a></li>
+              <li class="submenu-item"><a href="#"></a></li>
+              <li class="submenu-item"><a href="#"></a></li>
+              <li class="submenu-item"><a href="#"></a></li>
+              <li class="submenu-item"><a href="#"></a></li>
+              <li class="submenu-item"><a href="#"></a></li>
+              <li class="submenu-item"><a href="#"></a></li>
+              <li class="submenu-item"><a href="#"></a></li>
+              <li class="submenu-item"><a href="#"></a></li>
+              <li class="submenu-item"><a href="#"></a></li>
+              <li class="submenu-item"><a href="#"></a></li>
+              <li class="submenu-item"><a href="#"></a></li>
+              <li class="submenu-item"><a href="#"></a></li>
+              <li class="submenu-item"><a href="#"></a></li>
+              <li class="submenu-item"><a href="#"></a></li>
+              <li class="submenu-item"><a href="#"></a></li>
+              <li class="submenu-item"><a href="#"></a></li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a href="#">Освітня діяльність</a>
+            <ul class="submenu-container">
+              <li class="submenu-item">
+                <a href="#">Навчальна діяльність</a>
+                <ul class="sub-submenu-container">
+                  <li class="submenu-item">
+                    <a href="#">Календар навчального року</a>
+                  </li>
+                  <li class="submenu-item">
+                    <a href="#">Профільне навчання</a>
+                  </li>
+                  <li class="submenu-item">
+                    <a href="#">Академічна доброчесність</a>
+                  </li>
+                  <li class="submenu-item">
+                    <a href="#">Дистанційне навчання</a>
+                  </li>
+                  <li class="submenu-item"><a href="#">ДПА/ЗНО/НМТ</a></li>
+                  <li class="submenu-item">
+                    <a href="#">Атестація/Сертифікація</a>
+                  </li>
+                  <li class="submenu-item">
+                    <a href="#">Конкурси та олімпіади</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="submenu-item">
+                <a href="#">Виховна робота</a>
+                <ul class="sub-submenu-container">
+                  <li class="submenu-item">
+                    <a href="#">Національно-патріотичне виховання</a>
+                  </li>
+                  <li class="submenu-item"><a href="#">Гуртки</a></li>
+                  <li class="submenu-item">
+                    <a href="#">Професійна орієнтація</a>
+                  </li>
+                  <li class="submenu-item">
+                    <a href="#">Центр учнівського врядування "КРОК"</a>
+                  </li>
+                  <li class="submenu-item">
+                    <a href="#">Правовиховна-робота</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="submenu-item">
+                <a href="#">Методичний кейс</a>
+                <ul class="sub-submenu-container">
+                  <li class="submenu-item"><a href="#">page1</a></li>
+                  <li class="submenu-item"><a href="#">page2</a></li>
+                  <li class="submenu-item"><a href="#">page3</a></li>
+                </ul>
+              </li>
+              <li class="submenu-item">
+                <a href="#">Інклюзивна освіта</a>
+                <ul class="sub-submenu-container">
+                  <li class="submenu-item"><a href="#">page1</a></li>
+                  <li class="submenu-item"><a href="#">page2</a></li>
+                  <li class="submenu-item"><a href="#">page3</a></li>
+                </ul>
+              </li>
+              <li class="submenu-item">
+                <a href="#">Психологічна служба</a>
+                <ul class="sub-submenu-container">
+                  <li class="submenu-item"><a href="#">page1</a></li>
+                  <li class="submenu-item"><a href="#">page2</a></li>
+                  <li class="submenu-item"><a href="#">page3</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
 
@@ -49,11 +150,10 @@
       </ul>
     </header>
 
-<!--    <div class="container">-->
+    <!--    <div class="container">-->
     {% block content %}
-      <p class="text">Hello!</pclass>
-      {% endblock %}
-<!--    </div>-->
-
+    <p class="text">Hello!</p>
+    {% endblock %}
+    <!--    </div>-->
   </body>
 </html>

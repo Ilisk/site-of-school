@@ -19,7 +19,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 100  ;
+  z-index: 100;
   background: #fff;
   display: flex;
   justify-content: space-between;
@@ -38,21 +38,24 @@ header a {
   cursor: pointer;
 }
 
-.nav-links li,
+.menu-container li,
 .social-links li {
   display: inline-block;
 }
 
-.nav-links li a {
+.menu-container li a {
   padding: 15px;
   border-radius: 30px;
 }
 
-.nav-links li a:hover {
+.menu-container li a:hover {
   background: #30a050;
   color: #fff;
 }
 
+.menu-item {
+  display: inline-block;
+}
 .container {
   position: fixed;
 }
