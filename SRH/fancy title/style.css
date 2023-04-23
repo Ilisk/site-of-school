@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    width: 100%;
+    height: 50px;
+    margin-top: 100px;
+    background-color: aqua;
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+p {
+    font-size: 30px;
+    text-align: center;
+}
+
+.redline {
+    width: 200px;
+    height: 5px;
+    background-color: red;
+    position: absolute;
+    bottom: 0;
+    left: 44%;
+    z-index: 2;
+}
+
+.greyline {
+    width: 300px;
+    height: 2px;
+    background-color: gray;
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    z-index: 1;
+}
