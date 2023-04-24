@@ -7,6 +7,4 @@ from .models import News
 def print(request):
     obj_list = News.objects.all()
     return render(request, './test.html', {'obj_list': obj_list})
-def test(request):
-    obj_list = News.objects.all()
-    return render(request,'./test.html', {'obj_list': obj_list})
+

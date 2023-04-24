@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+<!--      <link rel="stylesheet" href="{% static 'css/header.css' %}" />-->
+    <link rel="stylesheet" href="../../css/slider_card.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <img src="{% static 'images/logo.svg' %}" alt="logo" />
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#" class="menu-item">Головна</a></li>
+          <li><a href="#" class="menu-item">Про нас</a></li>
+          <li><a href="#" class="menu-item">Новини</a></li>
+          <li><a href="#" class="menu-item">Інформаційна відкритість</a></li>
+          <li><a href="#" class="menu-item">Освітня діяльність</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social-links">
+        <li>
+          <img src="../school/review/static/images/fb.svg" alt="" />
+        </li>
+        <li>
+          <img src="../school/review/static/images/inst.svg" alt="" />
+        </li>
+        <li>
+          <img src="../school/review/static/images/tg.svg" alt="" />
+        </li>
+      </ul>
+    </header>
+<div class="container">
+      <div class="slider">
+        <!-- тут начать цикл -->
+        <div class="slick-slide">
+          <!-- тут вставить новости -->
+            <div class="news-list">
+            {% for obj in obj_list%}
+            <div class="news">
+                <div class="image">
+                <a href="#"> <img src="{{MEDIA_URL}}/{{ obj.image }}" alt=""/></a>
+                </div>
+
+                <div class="text">
+                    <h2>Запись {{ obj.name }}</h2>
+                    <div class="inf">
+                    <p>{{ obj.datetime }}</p>
+                    <p>Категория {{ obj.categories }}</p>
+                    </div>
+                    <p>{{ obj.text }}</p>
+                    <a href="#">Читать далее >></a>
+                </div>
+            </div>
+            </div>
+        </div>
+      {% endfor %}
+
+        <!-- тут закончить цикл -->
+      </div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+ </body>
+</html>

@@ -1,0 +1,87 @@
+{% extends 'header.html' %}
+{% load static%}
+
+{% block head %}
+
+
+    <!-- head -->
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Touch enabled jQuery plugin that lets you create beautiful responsive carousel slider.">
+    <meta name="author" content="David Deutsch">
+    <title>Slider</title>
+    <!-- Stylesheets -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,400italic,300italic' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="{% static 'css/slider.css' %}">
+
+    <!-- Owl Stylesheets -->
+       <link rel="stylesheet" href="{% static 'owlcarousel/assets/owl.carousel.min.css' %}">
+       <link rel="stylesheet" href="{% static 'owlcarousel/assets/owl.theme.default.min.css' %}">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- javascript -->
+      <script src="{% static 'vendors/jquery.min.js' %}"></script>
+      <script src="{% static 'owlcarousel/owl.carousel.js' %}"></script>
+{% endblock %}
+  </head>
+
+  <body>
+{% block content %}
+    <!-- body -->
+    <div class="container">
+              <div class="owl-carousel">
+                  {% for obj in obj_list%}
+                  <div class="item">
+                      <div class="image">
+                          <a href="#"> <img src="{{MEDIA_URL}}/{{ obj.image }}" alt=""/></a>
+                      </div> <!--/image-->
+                      <div class="text">
+                          <h2 class="name">{{ obj.name }}</h2>
+                          <div class="inf">
+                              <p>{{ obj.datetime }}</p>
+                              <p>{{ obj.categories }}</p>
+                          </div>
+                          <p>{{ obj.text }}</p>
+                          <a href="#">Читать далее >></a>
+                      </div> <!--/text -->
+
+                </div> <!--/item-->
+                {% endfor %}
+            </div> <!--/owl-carousel-->
+    </div> <!--/container-->
+
+<!--    <div class="owl-dots">-->
+<!--        <div class="owl-dot active"><span></span></div>-->
+<!--        <div class="owl-dot"><span></span></div>-->
+<!--        <div class="owl-dot"><span></span></div>-->
+<!--    </div>-->
+    <script>
+      var owl = $('.owl-carousel');
+      owl.owlCarousel({
+        margin: 10,
+        loop: true,
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 2
+          },
+          1000: {
+            items: 3
+          }
+        }
+      })
+    </script>
+    <!-- vendors -->
+    <script src="{% static 'vendors/highlight.js' %}"></script>
+  <script src="{% static 'js/app.js' %}"></script>
+  </body>
+</html>
+
+{% endblock %}

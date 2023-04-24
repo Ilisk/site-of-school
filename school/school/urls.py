@@ -19,15 +19,15 @@ from django.urls import path, include
 from news import views
 import mainpage
 import slider
-# import review
+import review
 from django.conf import settings #add this
 from django.conf.urls.static import static #add this
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("mainpage.urls")),
-    path('test.html/',views.print),
-    path('slider.html/', include("slider.urls"))
+    path('slider/', include("slider.urls")),
+    path('review/', include("review.urls"))
 
 ] + static(settings.MEDIA_URL,
                         document_root=settings.MEDIA_ROOT)
